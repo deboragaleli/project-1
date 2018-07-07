@@ -1,20 +1,39 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head>
-  <meta charset="UTF-8">
-  <title>Basic HTML</title>
- 
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  
+  <body>
 
-<header>
-    </header>
+    <div id="user-info">
+        <div id="user-name"></div>
+        <div id="user-locations"></div>
+        <button id="quit-game">Quit</button>
+    </div>
+    
+    <div id="map">
 
-    <body>
- <script>
- 
- </script>
 
-    </body>
+    </div>
+      
+    <div id="intructions">
+      <p>First player to reach all 5 locations first wins!</p>
+    </div>
 
-    </html>
+    <div id="opponent-info">
+          <table id="player-stats">
+            <th>Players</th>
+            <th>Locations Visited</th>
+          </table>
+    </div>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="assets/javascript/logic.js"></script>
+
+  </body>
+</html>
