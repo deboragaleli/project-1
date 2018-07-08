@@ -1,0 +1,54 @@
+.user {
+    color: white;
+    /* padding-bottom: 50px; */
+    font-size: 200%;
+
+}
+
+#user-name {
+    float: left;
+}
+
+#user-locations {
+    text-align: center;
+    /*  float: right;
+   padding-left: 70px;*/
+
+}
+
+#quit-game {
+    /* text-align: right; */
+    float: right;
+}
+
+#map {
+    margin-left: 100px;
+    /* margin-right: 175px; */
+}
+
+#p1 {
+    color: white;
+    text-align: center;
+    font-size: 300%;
+}
+
+th {
+    color: white;
+    text-align: center;
+    font-size: 300%;
+}
+
+#weather {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 300%;
+}
+ul {
+    color: white;
+    text-align: center;
+    font-size: 300%;
+}
+
+#forecast {
+    margin-left: 500px;
+}
