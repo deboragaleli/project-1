@@ -1,30 +1,35 @@
+$(document).ready(function () {
 
-var gpsLocation = [];
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD2FF3DfcY7m9OWWe0pON3c7QUg3CDFEwo",
+        authDomain: "project-1-889d0.firebaseapp.com",
+        databaseURL: "https://project-1-889d0.firebaseio.com",
+        projectId: "project-1-889d0",
+        storageBucket: "",
+        messagingSenderId: "624996998738"
+      };
+      firebase.initializeApp(config);
 
-for (var i = 0; i < gpsLocation; i++) {
-    console.log(gpsLocation.length);
-}
+      // Create variable to push data to firebase
+      var database = firebase.database();
 
-$(document).ready(function(){ 
+      // Variables
 
-  // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyD2FF3DfcY7m9OWWe0pON3c7QUg3CDFEwo",
-  authDomain: "project-1-889d0.firebaseapp.com",
-  databaseURL: "https://project-1-889d0.firebaseio.com",
-  projectId: "project-1-889d0",
-  storageBucket: ""
-  messagingSenderId: "624996998738",
-};
-firebase.initializeApp(config);
+      // Array for predetermined game locations
+      var gpsLocation = [];
 
-// Create variable to push data to firebase
-var database = firebase.database();
 
-// Add on.click method to buttons
-$("#quit-game").on("click", function(){
-// $("#add-train-btn").on("click", function(){}
+      // Loop for radomly generating locations for random routes
+      for (var i = 0; i < gpsLocation; i++) {
+        console.log(gpsLocation.length);
+      }
 
-// Variables from user input
+      // Add on.click method to buttons
+      $("#quit-game").on("click", function () {
+          // $("#add-train-btn").on("click", function(){}
 
-}}
+          // Variables from user input
+
+      }
+  })

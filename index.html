@@ -5,37 +5,44 @@
     <meta charset="UTF-8">
     <title>Project 1</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
   
-  <body>
+  <body background="assets/images/pirateMap.jpg">
 
-    <div id="user-info">
-        <div id="user-name"></div>
-        <div id="user-locations"></div>
+    <div class="user" id="user-info">
+        <div id="user-name">Me</div>
+        <div id="user-locations">3/5</div>
         <button id="quit-game">Quit</button>
     </div>
     
-    <div id="map">
+    <div id="map"> <img src="assets/images/Roadmap.jpg" style="width:1400px;height:800px;">
 
 
     </div>
       
     <div id="intructions">
-      <p>First player to reach all 5 locations first wins!</p>
+      <div id="p1">First player to reach all 5 locations first wins!</div>
     </div>
 
     <div id="opponent-info">
           <table id="player-stats">
-            <th>Players</th>
-            <th>Locations Visited</th>
+            <!-- <th>Players</th>
+            <th>Locations Visited</th> -->
+            <ul>Players-Pins</ul>
+            <ul>Nemisis-4/5</ul>
+            <ul>Friend-3/5</ul>
+            <ul>Princess-1/5</ul>
           </table>
     </div>
 
     <div id="weather">Local weather Conditions</div>
+    <img id="forecast" src="assets/images/weather.jpg">
+
    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="assets/javascript/logic.js"></script>
-
+ 
   </body>
 </html>
