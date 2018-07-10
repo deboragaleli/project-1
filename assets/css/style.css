@@ -1,29 +1,22 @@
+
+body {
+    background-image: url('../images/pirateMap.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
 .user {
     color: white;
-    /* padding-bottom: 50px; */
+    padding-bottom: 75px;
     font-size: 200%;
-
+    margin-left: 150px;
 }
 
-#user-name {
-    float: left;
-}
-
-#user-locations {
-    text-align: center;
-    /*  float: right;
-   padding-left: 70px;*/
-
-}
-
-#quit-game {
-    /* text-align: right; */
-    float: right;
-}
-
+/* Place holder for GPS map */
 #map {
     margin-left: 100px;
-    /* margin-right: 175px; */
+    margin-right: 175px;
 }
 
 #p1 {
@@ -32,7 +25,8 @@
     font-size: 300%;
 }
 
-th {
+#player-stats {
+    margin-left: 650px;
     color: white;
     text-align: center;
     font-size: 300%;
@@ -49,6 +43,22 @@ ul {
     font-size: 300%;
 }
 
+/* Place holder for weather display */
 #forecast {
     margin-left: 500px;
+} 
+
+ /* Screen sizes */ 
+@media screen and (max-width: 640px) {
+    body {
+        width: 100%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+    }   
 }

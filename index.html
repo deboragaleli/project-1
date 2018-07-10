@@ -3,22 +3,22 @@
 
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project 1</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
   
-  <body background="assets/images/pirateMap.jpg">
+  <body>
 
-    <div class="user" id="user-info">
-        <div id="user-name">Me</div>
-        <div id="user-locations">3/5</div>
-        <button id="quit-game">Quit</button>
+    <div class="user" id="user-info" class="row">
+        <div id="user-name" class="col-md-4"></div>
+        <div id="user-locations" class="col-md-4"></div>
+        <button id="quit-game" class="col-md-1">Quit</button>
     </div>
     
-    <div id="map"> <img src="assets/images/Roadmap.jpg" style="width:1400px;height:800px;">
-
-
+    <!-- Map location-->
+    <div>
     </div>
       
     <div id="intructions">
@@ -27,22 +27,29 @@
 
     <div id="opponent-info">
           <table id="player-stats">
-            <!-- <th>Players</th>
-            <th>Locations Visited</th> -->
-            <ul>Players-Pins</ul>
-            <ul>Nemisis-4/5</ul>
-            <ul>Friend-3/5</ul>
-            <ul>Princess-1/5</ul>
-          </table>
+            <thead>
+              <tr>
+                <th>Players</th><br>
+                <th>Locations Visited</th>
+              </tr>             
+            </thead>         
+            <tbody>
+
+            <!-- Insert rows here -->
+
+            </tbody>
+        </table>
     </div>
+    <br>
 
     <div id="weather">Local weather Conditions</div>
-    <img id="forecast" src="assets/images/weather.jpg">
+    
 
    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="assets/javascript/logic.js"></script>
  
+    
   </body>
 </html>
