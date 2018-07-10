@@ -9,32 +9,37 @@
   </head>
   
   <body>
+    
+    <div id="container-page2">
+      <button type="button" class="btn btn-primary btn-lg">Create a new game</button>
+      <button type="button" class="btn btn-primary btn-lg">Join a game</button>
+    </div>
 
-    <div id="user-info">
+    <div id="container-page3">
+      <div id="user-info">
         <div id="user-name"></div>
         <div id="user-locations"></div>
         <button id="quit-game">Quit</button>
-    </div>
+      </div>
     
     <!-- This is a loading spinner -->
-    <div class="loader">Loading...</div>
+      <div class="loader">Loading...</div>
     <!-- This div creates the map -->
-    <div id="map">
-    </div>
+      <div id="map"></div>
     <!-- This div gets the current weather -->
-    <div id="weather">
-    </div>
+      <div id="weather"></div>
       
-    <div id="intructions">
-      <p>First player to reach all 5 locations first wins!</p>
-    </div>
+      <div id="intructions">
+        <p>First player to reach all 5 locations first wins!</p>
+      </div>
 
-    <div id="opponent-info">
-          <table id="player-stats">
-            <th>Players</th>
-            <th>Locations Visited</th>
-          </table>
-    </div>
+      <div id="opponent-info">
+        <table id="player-stats">
+          <th>Players</th>
+          <th>Locations Visited</th>
+        </table>
+      </div>
+    </div>  
    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>

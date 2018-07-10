@@ -22,6 +22,14 @@ $(document).ready(function() {
 
   });
 
+  // Logic for the 2nd screen
+  $('#container-page2').on('click', function() {
+    $('#container-page2').hide();
+    $('#container-page3').show();
+
+    getLocation();   
+  });
+
   // Get users geolocation
   function getLocation() {
     if (navigator.geolocation) {
@@ -30,8 +38,6 @@ $(document).ready(function() {
       console.log("Geolocation is not supported by this browser.");
     }
   }
-
-  getLocation();
 
   function showPosition(position) {
     // Just got the geolocation, initialize Google Maps
@@ -54,7 +60,7 @@ $(document).ready(function() {
 		};
     map = new google.maps.Map(document.getElementById('map'), mapOptions);	// create new map in the map-canvas div
     
-    var marker = new google.maps.Marker({						// place a marker on the map at the address
+    var marker = new google.maps.Marker({						// place a marker on the map at the location
       map: map,
       position: { lat: lat, lng: lng }
     });
@@ -80,7 +86,7 @@ $(document).ready(function() {
         speakText(spokenResponse);
 			});
 		} else {
-			return false;														// respond w/error if no address entered
+			return false;														
 		}
   }
   
@@ -90,7 +96,7 @@ $(document).ready(function() {
 		// setup synthesis
 		var msg = new SpeechSynthesisUtterance();
 		var voices = window.speechSynthesis.getVoices();
-		msg.voice = voices[1];					// Note: some voices don't support altering params
+		msg.voice = voices[1];					
 		msg.voiceURI = 'native';
 		msg.volume = 1;							// 0 to 1
 		msg.rate = 1;							// 0.1 to 10
