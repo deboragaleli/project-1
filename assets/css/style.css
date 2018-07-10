@@ -1,3 +1,68 @@
+
+body {
+    background-image: url('../images/pirateMap.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.user {
+    color: white;
+    padding-bottom: 75px;
+    font-size: 200%;
+    margin-left: 150px;
+}
+
+/* Place holder for GPS map */
+#map {
+    margin-left: 100px;
+    margin-right: 175px;
+}
+
+#p1 {
+    color: white;
+    text-align: center;
+    font-size: 300%;
+}
+
+#player-stats {
+    margin-left: 650px;
+    color: white;
+    text-align: center;
+    font-size: 300%;
+}
+
+#weather {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    font-size: 300%;
+}
+ul {
+    color: white;
+    text-align: center;
+    font-size: 300%;
+}
+
+/* Place holder for weather display */
+#forecast {
+    margin-left: 500px;
+} 
+
+ /* Screen sizes */ 
+@media screen and (max-width: 640px) {
+    body {
+        width: 100%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+    }   
+}
+=======
 #container-page3 {
   display: none 
 }
@@ -48,3 +113,4 @@
     transform: rotate(360deg);
   }
 }
+
