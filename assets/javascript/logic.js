@@ -70,6 +70,14 @@ $('#email').on('input', function () {
 
   });
 
+  // Logic for the 2nd screen
+  $('#container-page2').on('click', function() {
+    $('#container-page2').hide();
+    $('#container-page3').show();
+
+    getLocation();   
+  });
+
   // Get users geolocation
   function getLocation() {
     if (navigator.geolocation) {
@@ -78,8 +86,6 @@ $('#email').on('input', function () {
       console.log("Geolocation is not supported by this browser.");
     }
   }
-
-  getLocation();
 
   function showPosition(position) {
     // Just got the geolocation, initialize Google Maps
@@ -102,7 +108,7 @@ $('#email').on('input', function () {
 		};
     map = new google.maps.Map(document.getElementById('map'), mapOptions);	// create new map in the map-canvas div
     
-    var marker = new google.maps.Marker({						// place a marker on the map at the address
+    var marker = new google.maps.Marker({						// place a marker on the map at the location
       map: map,
       position: { lat: lat, lng: lng }
     });
@@ -128,7 +134,7 @@ $('#email').on('input', function () {
         speakText(spokenResponse);
 			});
 		} else {
-			return false;												
+			return false;														
 		}
   }
   
@@ -148,8 +154,15 @@ $('#email').on('input', function () {
 		
 		speechSynthesis.speak(msg);
 	}
+  // Append opponent info to table on page  //
+$("#user-name").append("Me");
+$("#user-locations").append("3" + "/5");
+$("#player-stats > tbody").append("<tr><td>" + "Nemesis" + "</td><td>" + "4/5" + "</td></tr>");
+$("#player-stats > tbody").append("<tr><td>" + "Friend" + "</td><td>" + "3/5" + "</td></tr>");
+$("#player-stats > tbody").append("<tr><td>" + "Princess T" + "</td><td>" + "1/5" + "</td></tr>");
 
 });
+
 
 
 
