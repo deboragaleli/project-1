@@ -73,11 +73,11 @@ $(document).ready(function() {
 	function getWeather(latitude,longitude) {
 		if(latitude != '' && longitude != '') {
 			$("#weather").val("Retrieving weather...");										// write temporary response while we get the weather
-			$.getJSON( "http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&units=imperial&APPID=67746f8fab56a43094592085e1ce2feb", function(data) {	// add '&units=imperial' to get U.S. measurements
+			$.getJSON( "https://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&units=imperial&APPID=67746f8fab56a43094592085e1ce2feb", function(data) {	// add '&units=imperial' to get U.S. measurements
 				var currWeather					= new Array();								// create array to hold our weather response data
 				currWeather['currTemp']			= Math.round(data.main.temp);				// current temperature
 				currWeather['description']		= data.weather[0].description;				// short text description (ie. rain, sunny, etc.)
-				currWeather['icon']				= "http://openweathermap.org/img/w/"+data.weather[0].icon+".png";	// 50x50 pixel png icon
+				currWeather['icon']				= "https://openweathermap.org/img/w/"+data.weather[0].icon+".png";	// 50x50 pixel png icon
 
 				var response 		= "<img src='"+currWeather['icon']+"' /> Current Weather: "+currWeather['currTemp']+"\xB0 and "+currWeather['description'];
 				var spokenResponse	= "It is currently "+currWeather['currTemp']+" degrees and "+currWeather['description'];
