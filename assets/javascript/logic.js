@@ -14,6 +14,54 @@ $(document).ready(function() {
   // Create variable to push data to firebase
   var database = firebase.database();
 
+
+// recognizes value of email and password input
+$("#login").click(function () {
+  var emailInput = $("#email").val();
+  var passwordInput = $("#password").val();
+
+
+  //prevents inputs from being empty
+  console.log('emailInput');
+  if (emailInput == 0) {
+    $(".loginErrorp").text("Please provide a valid email!");
+
+  }else {
+      $(".loginErrorp").text();
+    }
+  
+
+  if (passwordInput == 0) {
+    $(".loginErrore").text("Please provide a valid password!");
+  }
+});
+
+
+$("#register").click(function () {
+  var emailInput = $("#email").val();
+  var passwordInput = $("#password").val();
+
+  console.log('emailInput');
+  if (emailInput == 0) {
+    $(".loginErrorp").text("Please provide a valid email!");
+  }
+
+  if (passwordInput == 0) {
+    $(".loginErrore").text("Please provide a valid password!");
+  }
+});
+
+//validates email
+
+$('#email').on('input', function () {
+  var input = $(this);
+  var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  var is_email = re.test(input.val());
+  if (is_email) { alert('yes!'); }
+  else {
+    $(".loginErrorp").text("Please provide a valid email!");}
+  });
+
   // Add on.click method to buttons
   $("#quit-game").on("click", function() {
   // $("#add-train-btn").on("click", function(){}
@@ -53,7 +101,7 @@ $(document).ready(function() {
     $('.loader').hide();
 
 		geocoder = new google.maps.Geocoder();						// create geocoder object
-		var latlng = new google.maps.LatLng(lat, lng);		// set default lat/long (new york city)
+		var latlng = new google.maps.LatLng(lat, lng);		// set default lat/long 
 		var mapOptions	= {													// options for map
 			zoom: 20, // increase zoom to get closer
 			center: latlng
@@ -114,4 +162,23 @@ $("#player-stats > tbody").append("<tr><td>" + "Friend" + "</td><td>" + "3/5" + 
 $("#player-stats > tbody").append("<tr><td>" + "Princess T" + "</td><td>" + "1/5" + "</td></tr>");
 
 });
+
+
+
+
+
+$( function() {
+  $( "#speed" ).selectmenu();
+
+  $( "#files" ).selectmenu();
+
+  $( "#number" )
+    .selectmenu()
+    .selectmenu( "menuWidget" )
+      .addClass( "overflow" );
+
+  $( "#salutation" ).selectmenu();
+} );
+
+
 
