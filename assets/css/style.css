@@ -5,48 +5,51 @@ body {
     background-attachment: fixed;
 }
 
+/* for when firebase is ready - Debora
+    #container-page2 {
+    display: none;
+} */
+
+#container-page3 {
+    display: none; 
+}
 
 .user {
     color: white;
     padding-bottom: 75px;
-    font-size: 200%;
-    margin-left: 150px;
+    font-size: 100%;
+    margin-left: 60px;
 }
 
-/* Place holder for GPS map */
 #map {
-    margin-left: 100px;
-    margin-right: 175px;
+    width: 100%;
+    height: 500px;
 }
 
-#p1 {
+
+#p {
     color: white;
     text-align: center;
     font-size: 300%;
 }
 
 #player-stats {
-    margin-left: 650px;
+    margin-left: 400px;
     color: white;
     text-align: center;
     font-size: 300%;
 }
 
 #weather {
-    color: rgb(255, 0, 0);
+    color: #ffff;
     text-align: center;
-    font-size: 300%;
+    font-size: 150%;
 }
 ul {
     color: white;
     text-align: center;
-    font-size: 300%;
+    font-size: 100%;
 }
-
-/* Place holder for weather display */
-#forecast {
-    margin-left: 500px;
-} 
 
  /* Screen sizes */ 
 @media screen and (max-width: 640px) {
@@ -63,14 +66,7 @@ ul {
     }   
 }
 
-#container-page3 {
-  display: none 
-}
 
-#map {
-  width: 100%;
-  height: 500px;
-}
 
 .loader,
 .loader:after {
@@ -113,9 +109,6 @@ ul {
     transform: rotate(360deg);
   }
 }
-
-
-
 
 fieldset {
   border: 0;
