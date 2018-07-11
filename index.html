@@ -24,23 +24,27 @@
               <input type="button" name="Register" id="register" value="register">
           </form>
       </div>
-  </div>
-
-  <div class= "loginErrore"> </div>
-  <div class= "loginErrorp"> </div>
-
-
-    <div id="user-info">
-        <div id="user-name"></div>
-        <div id="user-locations"></div>
-        <button id="quit-game">Quit</button>
     </div>
-    <div id="container-page2">
-        <button type="button" class="btn btn-primary btn-lg">Create a new game</button>
-        <button type="button" class="btn btn-primary btn-lg">Join a game</button>
-        </div>
 
-    
+    <div class= "loginErrore"> </div>
+    <div class= "loginErrorp"> </div>
+
+    <div id="container-page2">
+      <button>Create Game</button>
+      <button>Join Game</button>
+      <div class="demo">
+        <form action="#">
+        <fieldset>
+          <label for="number">Select a number of locations</label>
+            <select name="number" id="number">
+              <option>5</option>
+              <option>10</option>
+              <option>15</option>
+            </select>
+        </fieldset>
+        </form>
+      </div>
+    </div>
 
     <div id="container-page3">
       <div class="user" id="user-info" class="row">
@@ -49,36 +53,31 @@
         <button id="quit-game" class="col-md-1">Quit</button>
         
           <div id="intructions">
-        <p>First player to reach all 5 locations first wins!</p>
-      </div>
+            <p>First player to reach all 5 locations first wins!</p>
+          </div>
     
-      
-    
-    <!-- This is a loading spinner -->
+          <!-- This is a loading spinner -->
       <div class="loader">Loading...</div>
     <!-- This div creates the map -->
       <div id="map"></div>
     <!-- This div gets the current weather -->
       <div id="weather">Local weather Conditions</div>
       
-    
-      
-       <div id="opponent-info">
-          <table id="player-stats">
-            <thead>
-              <tr>
-                <th>Players</th><br>
-                <th>Locations Visited</th>
-              </tr>             
-            </thead>         
-            <tbody>
+      <div id="opponent-info">
+        <table id="player-stats">
+          <thead>
+            <tr>
+              <th>Players</th><br>
+              <th>Locations Visited</th>
+            </tr>             
+          </thead>         
+          <tbody>
 
-            <!-- Insert rows here -->
+          <!-- Insert rows here -->
 
-            </tbody>
+          </tbody>
         </table>
       </div>
-        
     </div>
    
    
@@ -86,51 +85,7 @@
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="assets/javascript/logic.js"></script>
     <!-- Embed Google Maps -->
-
     <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyD8X3TjatPq-MC5drdcEC-elKjkkLzottg"></script>  
  
- 
- <br>
- <button>Create Game</button>
-
- <button>Join Game</button>
-
-
-
- <div class="demo">
- 
-  <form action="#">
-   
-    <fieldset>
-    
-    
-      <label for="number">Select a number of locations</label>
-      <select name="number" id="number">
-        <option>5</option>
-        <option>10</option>
-        <option>15</option>
-      </select>
-
-      <label for="number">Select a number of locations</label>
-      <select name="number" id="number">
-        <option>5</option>
-        <option>10</option>
-        <option>15</option>
-      </select>
-    
-    
-      
-    </fieldset>
-    
-    </form>
-    
-    </div>
- 
- 
- 
- 
- 
- 
-
   </body>
 </html>
