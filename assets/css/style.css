@@ -5,10 +5,10 @@ body {
     background-attachment: fixed;
 }
 
-/* for when firebase is ready - Debora
-    #container-page2 {
+
+#container-page2 {
     display: none;
-} */
+}
 
 #container-page3 {
     display: none; 
