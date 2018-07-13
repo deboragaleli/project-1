@@ -10,6 +10,8 @@ $(document).ready(function () {
   };
   firebase.initializeApp(config);
 
+  $('#container-page2').hide();
+
   // Create variable to push data to firebase
   var database = firebase.database();
 

@@ -1,9 +1,27 @@
 
 body {
-    background-image: url('../images/pirateMap.jpg');
+    background-image: url('http://blog.hihostels.com/wp-content/uploads/2014/07/9339807762_3e43f0c0ef_b.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
+
+
+<form class="pure-form">
+    <fieldset>
+        <legend>A compact inline form</legend>
+
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+
+        <label for="remember">
+            <input id="remember" type="checkbox"> Remember me
+        </label>
+
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+    </fieldset>
+</form>
 
 
 #container-page2 {
