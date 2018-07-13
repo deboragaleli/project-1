@@ -59,6 +59,48 @@
     
           <!-- This is a loading spinner -->
       <div class="loader">Loading...</div>
+  
+      <!-- Jacobs Map -->
+      <div id="map"></div>
+      <div id="right-panel">
+      <div>
+      
+       <span id="demo"></span>
+      <b>Start:</b>
+      <select id="start">
+        <option value="Valencia College, West Campus, South Kirkman Road, Orlando, FL, USA">Valencia West</option>
+        <option value="geoFindMe()">My Location
+  
+  
+        </option>
+          <div id="out"></div>"
+      </select>
+      
+      <br>
+      <b>Waypoints:</b> <br>
+      <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
+      <select multiple id="waypoints">
+        <option value="Planet Fitness, Metropolis Way, Orlando, FL, USA">Planet Fitness</option>
+        <option value="McDonald's, South Hiawassee Road, Orlando, FL, USA">McDonald's</option>
+        <option value="Wendy's, Wilshire Drive, Orlando, FL, USA">Wendy's</option>
+        <option value="Dollar Tree, South Kirkman Road, Orlando, FL, USA">Dollar Tree</option>
+        <option value="Walgreens, South Kirkman Road, Orlando, FL, USA">Walgreens</option>
+        <option value="Starbucks, South Kirkman Road, Orlando, FL, USA">Starbucks</option>
+        <option value="Chipotle Mexican Grill, South Kirkman Road, Orlando, FL, USA">Chipotle</option>
+        <option value="Essentials Spa & Salon Metrowest, 1507 Park Center Dr #1K, Orlando, FL 32835">Spa</option>
+      </select>
+      <br>
+        <input type="submit" id="submit">
+      </div>
+      <div id="directions-panel"></div>
+      </div>
+
+
+
+
+
+
+
     <!-- This div creates the map -->
       <div id="map"></div>
     <!-- This div gets the current weather -->
@@ -81,11 +123,15 @@
       </div>
     </div>
    
-   
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
     <script src="assets/javascript/logic.js"></script>
+    <script src="assets/javascript/google-api.js"></script>
     <!-- Embed Google Maps -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC1UGWG6ROIOtSbZ7piVJ0YvhjmTAotOc&callback=initMap">
+    </script>
     <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyD8X3TjatPq-MC5drdcEC-elKjkkLzottg"></script>  
  
   </body>
