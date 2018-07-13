@@ -1,89 +1,156 @@
 
 body {
-    background-image: url('http://blog.hihostels.com/wp-content/uploads/2014/07/9339807762_3e43f0c0ef_b.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+  background-image: url('http://blog.hihostels.com/wp-content/uploads/2014/07/9339807762_3e43f0c0ef_b.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
 }
 
+#container-page1 {
+background-color: #fff;
+padding: 10px;
+margin: 100px auto;
+box-sizing: border-box;
+width: 40%;
+border: 1px solid #000000;
+border-radius: 25px;
+margin-bottom: 100px;
+}
+/* Page with game instructions */
+#how-to-play-container {
+background-color: #fff;
+padding: 10px;
+margin: 100px auto;
+box-sizing: border-box;
+width: 40%;
+border: 1px solid #000000;
+border-radius: 25px;
+margin-bottom: 100px;
+}
 
-<form class="pure-form">
-    <fieldset>
-        <legend>A compact inline form</legend>
+/* logo image */
+.pure-img {
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 100%;
+}
 
-        <input type="email" placeholder="Email">
-        <input type="password" placeholder="Password">
+.sub-container {
+left: 50%;
+margin-left: -200px;
+width: 400px;
+position: relative;
+text-align: center;
+}
 
-        <label for="remember">
-            <input id="remember" type="checkbox"> Remember me
-        </label>
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+}
+/* login/register form */
+.pure-form pure-form-aligned {
+margin-left: auto;
+margin-right: auto;
+}
 
-        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
-    </fieldset>
-</form>
+.pure-form-aligned .pure-control-group label {
+width: 5em;
+}
 
+#container-page2, #how-to-play-container {
+  display: none;
+}
 
 #container-page2 {
-    display: none;
+background-color: #fff;
+padding: 10px;
+margin: 100px auto;
+box-sizing: border-box;
+width: 40%;
+border: 1px solid #000000;
+border-radius: 25px;
+margin-bottom: 100px;
 }
 
+.sub-container2 {
+left: 50%;
+margin-left: -200px;
+width: 400px;
+position: relative;
+text-align: center;
+}
+
+#play-game, #how-to-play {
+font-size: 125%;
+}
+
+ul.instructions {
+  list-style-type: circle;
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+}
+
+
 #container-page3 {
-    display: none; 
+  display: none;
 }
 
 .user {
-    color: white;
-    padding-bottom: 75px;
-    font-size: 100%;
-    margin-left: 60px;
+  color: white;
+  padding-bottom: 75px;
+  font-size: 100%;
 }
 /* jacobs style */
 
 #right-panel {
-    font-family: 'Roboto','sans-serif';
-    line-height: 30px;
-    padding-left: 10px;
-  }
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
 
-  #right-panel select, #right-panel input {
-    font-size: 15px;
-  }
+#right-panel select, #right-panel input {
+  font-size: 15px;
+}
 
-  #right-panel select {
-    width: 100%;
-  }
+#right-panel select {
+  width: 100%;
+}
 
-  #right-panel i {
-    font-size: 12px;
-  }
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  #map {
-    height: 100%;
-    float: left;
-    width: 70%;
-    height: 100%;
-  }
-  #right-panel {
-    margin: 20px;
-    border-width: 2px;
-    width: 20%;
-    height: 400px;
-    float: left;
-    text-align: left;
-    padding-top: 0;
-  }
-  #directions-panel {
-    margin-top: 10px;
-    background-color: #FFEE77;
-    padding: 10px;
-    overflow: scroll;
-    height: 174px;
-  }
+#right-panel i {
+  font-size: 12px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+#right-panel {
+  margin: 20px;
+  border-width: 2px;
+  width: 20%;
+  height: 400px;
+  float: left;
+  text-align: left;
+  padding-top: 0;
+}
+#directions-panel {
+  margin-top: 10px;
+  background-color: #FFEE77;
+  padding: 10px;
+  overflow: scroll;
+  height: 174px;
+}
 
 
 
@@ -93,101 +160,123 @@ body {
 
 
 #map {
-    width: 100%;
-    height: 500px;
+  width: 100%;
+  height: 500px;
 }
 
 
 #p {
-    color: white;
-    text-align: center;
-    font-size: 300%;
+  color: white;
+  text-align: center;
+  font-size: 300%;
 }
 
 #player-stats {
-    margin-left: 400px;
-    color: white;
-    text-align: center;
-    font-size: 300%;
+  margin-left: 400px;
+  color: white;
+  text-align: center;
+  font-size: 300%;
 }
 
 #weather {
-    color: #ffff;
-    text-align: center;
-    font-size: 150%;
+  color: #ffff;
+  text-align: center;
+  font-size: 150%;
 }
 ul {
-    color: white;
-    text-align: center;
-    font-size: 100%;
+  color: white;
+  text-align: center;
+  font-size: 100%;
 }
 
- /* Screen sizes */ 
+/* Screen sizes */
 @media screen and (max-width: 640px) {
-    body {
-        width: 100%;
-        background-repeat: repeat;
-        background-attachment: fixed;
-    }
+  body {
+      width: 100%;
+      background-repeat: repeat;
+      background-attachment: fixed;
+  }
+
+  #player-stats {
+    width: 100%;
+    margin-left: 0;
+    display: block;
+    font-size: 14px;
+  }
+
+  #right-panel {
+    width: 100%;
+  }
+
+  #container-page1 {
+    width: 80%;
+  }
+
+  .sub-container {
+    left: auto;
+    margin-left: auto;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        width: 100%;
-    }   
+  body {
+      width: 100%;
+  }
 }
 
 
 
 .loader,
 .loader:after {
-  border-radius: 50%;
-  width: 10em;
-  height: 10em;
+border-radius: 50%;
+width: 10em;
+height: 10em;
 }
 .loader {
-  margin: 60px auto;
-  font-size: 10px;
-  position: relative;
-  text-indent: -9999em;
-  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-left: 1.1em solid #000000;
-  -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation: load8 1.1s infinite linear;
-  animation: load8 1.1s infinite linear;
+margin: 60px auto;
+font-size: 10px;
+position: relative;
+text-indent: -9999em;
+border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+border-left: 1.1em solid #000000;
+-webkit-transform: translateZ(0);
+-ms-transform: translateZ(0);
+transform: translateZ(0);
+-webkit-animation: load8 1.1s infinite linear;
+animation: load8 1.1s infinite linear;
 }
 @-webkit-keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+0% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+100% {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
 }
 @keyframes load8 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
+0% {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+100% {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
 }
 
 fieldset {
-  border: 0;
+border: 0;
 }
 label {
-  display: block;
-  margin: 30px 0 0 0;
+display: block;
+margin: 30px 0 0 0;
 }
 .overflow {
-  height: 200px;
+height: 200px;
 }
+
