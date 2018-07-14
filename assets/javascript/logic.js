@@ -23,13 +23,16 @@ $(document).ready(function () {
     //prevents inputs from being empty
     if (emailInput == 0) {
       $(".loginErrorp").text("Please provide a valid email!");
-
+      return;
     } else {
       $(".loginErrorp").text();
     }
 
     if (passwordInput == 0) {
       $(".loginErrore").text("Please provide a valid password!");
+      return;
+    } else {
+      $(".loginErrore").text();
     }
 
     var isEmailValid = false;
@@ -41,20 +44,24 @@ $(document).ready(function () {
       .on("child_added", function(snapshot) {
         isEmailValid = true;
       });
-    
-    // Check if password is valid if email is valid 
+
+      console.log('isEmailValid', isEmailValid);
+
+    // Check if password is valid if email is valid
     if (isEmailValid) {
       database.ref('users')
         .orderByChild("password").equalTo(passwordInput)
         .on("child_added", function(snapshot) {
           isPasswordValid = true;
         });
-      
+
+        console.log('isPasswordValid', isPasswordValid);
+
       if (isEmailValid && !isPasswordValid) {
         $(".loginErrorp").text("Wrong password!");
       }
     }
-    
+
     // User Logged, let's save the user on the activeUsers key
     if (isEmailValid && isPasswordValid) {
       addUserToActiveUser(emailInput);
@@ -83,12 +90,12 @@ $(document).ready(function () {
     console.log('is_email', is_email);
     return is_email;
   }
-  
+
   $("#register").on("click", function () {
     // Grabs user input and assign to variables
     var emailRegister = $("#email").val().trim();
     var passwordRegister = $("#password").val().trim();
-    
+
     // Run function with regular expression to validate email
     if (!validateEmail(emailRegister)) {
       $(".loginErrorp").text("Please provide a valid email!");
@@ -132,34 +139,25 @@ $(document).ready(function () {
     // Append opponent info to table on page  //
     // $("#user-locations").append("3" + "/5");
     $("#player-stats > tbody").append("<tr><td>" + firebaseName + "</td><td>" + "4/5" + "</td></tr>");
-    
+
   });
 
 
-	// userData.ref().on("child_added", function (childSnapshot, prevChildKey) {
-
-	// 	console.log(childSnapshot.val());
-
-	// 	// assign firebase variables to snapshots.
-	// 	var firebaseName = childSnapshot.val().user;
-	// 	var firebasePassword = childSnapshot.val().password;
-
-
-	// 	// Append opponent info to table on page  //
-	// 	$("#user-name").append("firebaseName");
-	// 	$("#user-locations").append("3" + "/5");
-	// 	$("#player-stats > tbody").append("<tr><td>" + "firbase.data" + "</td><td>" + "4/5" + "</td></tr>");
-	// 	$("#player-stats > tbody").append("<tr><td>" + "Friend" + "</td><td>" + "3/5" + "</td></tr>");
-	// 	$("#player-stats > tbody").append("<tr><td>" + "Princess T" + "</td><td>" + "1/5" + "</td></tr>");
-
-
-	// });
-
-  $('#container-page2').on('click', function () {
+  $('#play-game').on('click', function () {
     $('#container-page2').hide();
     $('#container-page3').show();
 
     getLocation();
+  });
+
+  $('#how-to-play').on('click', function () {
+    $('#container-page2').hide();
+    $('#how-to-play-container').show();
+  });
+
+  $('#go-back-button').on('click', function () {
+    $('#container-page2').show();
+    $('#how-to-play-container').hide();
   });
 
   // Get users geolocation
@@ -185,7 +183,7 @@ $(document).ready(function () {
     $('.loader').hide();
 
     geocoder = new google.maps.Geocoder();						// create geocoder object
-    var latlng = new google.maps.LatLng(lat, lng);		// set default lat/long 
+    var latlng = new google.maps.LatLng(lat, lng);		// set default lat/long
     var mapOptions = {													// options for map
       zoom: 20, // increase zoom to get closer
       center: latlng
@@ -240,19 +238,4 @@ $(document).ready(function () {
   }
 
 });
-
-// $( function() {
-//   $( "#speed" ).selectmenu();
-
-//   $( "#files" ).selectmenu();
-
-//   $( "#number" )
-//     .selectmenu()
-//     .selectmenu( "menuWidget" )
-//       .addClass( "overflow" );
-
-//   $( "#salutation" ).selectmenu();
-// });
-
-
 
