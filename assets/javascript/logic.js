@@ -175,20 +175,29 @@ $(document).ready(function () {
   }
 
   // Embed Google Maps
-  var geocoder;
   var map;
 
   // setup initial map
   function initializeMap(lat, lng) {
     $('.loader').hide();
 
-    geocoder = new google.maps.Geocoder();						// create geocoder object
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 20,
+      center: {lat: lat, lng: lng}
+    });
+    directionsDisplay.setMap(map);
+
+
+
     var latlng = new google.maps.LatLng(lat, lng);		// set default lat/long
-    var mapOptions = {													// options for map
-      zoom: 20, // increase zoom to get closer
-      center: latlng
-    };
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);	// create new map in the map-canvas div
+    calculateAndDisplayRoute(directionsService, directionsDisplay, latlng);
+    // var mapOptions = {													// options for map
+    //   zoom: 20, // increase zoom to get closer
+    //   center: latlng
+    // };
+    // map = new google.maps.Map(document.getElementById('map'), mapOptions);	// create new map in the map-canvas div
 
     var marker = new google.maps.Marker({						// place a marker on the map at the location
       map: map,
@@ -197,6 +206,45 @@ $(document).ready(function () {
 
     // Get weather based on my location
     getWeather(lat, lng);
+  }
+
+  function calculateAndDisplayRoute(directionsService, directionsDisplay, latlng) {
+    var waypts = [];
+    var checkboxArray = document.getElementById('waypoints');
+    for (var i = 0; i < checkboxArray.length; i++) {
+      if (checkboxArray.options[i].selected) {
+        waypts.push({
+          location: checkboxArray[i].value,
+          stopover: true
+        });
+      }
+    }
+
+    directionsService.route({
+      origin: latlng,
+      destination: document.getElementById('waypoints').value,
+      waypoints: waypts,
+      optimizeWaypoints: true,
+      travelMode: 'DRIVING'
+    }, function(response, status) {
+      if (status === 'OK') {
+        directionsDisplay.setDirections(response);
+        var route = response.routes[0];
+        var summaryPanel = document.getElementById('directions-panel');
+        summaryPanel.innerHTML = '';
+        // For each route, display summary information.
+        for (var i = 0; i < route.legs.length; i++) {
+          var routeSegment = i + 1;
+          summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment +
+              '</b><br>';
+          summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
+        //   summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
+          summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+        }
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
   }
 
   // function to get weather for an address
@@ -238,4 +286,3 @@ $(document).ready(function () {
   }
 
 });
-

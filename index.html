@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   </head>
 
   <body>
@@ -22,7 +21,7 @@
                 <form class="pure-form pure-form-aligned">
                     <fieldset>
                         <div class="pure-control-group">
-                            <h2>A race around the city. Go!</h2>
+                            <h2>Create Login Form for Project-1 </h2>
                             <br />
                             <label for="email">Email :</label>
                             <input id="email" type="text" placeholder="Email">
@@ -56,17 +55,9 @@
     </div>
 
     <div id="how-to-play-container">
-      <ul class="instructions">
-        <li>First register a username and password for an account, if you already have an account login with the same exact username and password you registered with.</li><br />
-        <li>Select "Play Game" to join a lobby with your friends.</li><br />
-        <li>Before you begin the game, all the player will make a wager that the winning player will recieve.</li>
-        <li>Then you will select how many places to be visited to win the game.</li><br />
-        <li>Once the game starts you will be given a list of places to visit, you select of the places for the route to that place. Once you reach that place you will be granted a point to your score and once you reach the max places you will be announced as the winner.</li><br />
-        <li>The winner will then recieve the reward of the wagger that the lobby decided on before the game started.</li><br />
-        <li>Make sure to KEEP UP!</li>
-      </ul>    
+      Content for how to play
 
-      <button id="go-back-button" class="button-xlarge pure-button">Back</button>
+      <button id="go-back-button" class="button-xlarge pure-button">< Back</button>
     </div>
 
     <div id="container-page3">
@@ -83,7 +74,9 @@
       <div class="loader">Loading...</div>
 
       <!-- Jacobs Map -->
+      <!-- <div id="map2"></div> -->
       <div id="map"></div>
+
       <div id="right-panel">
       <div>
 
@@ -102,14 +95,14 @@
       <b>Waypoints:</b> <br>
       <i>(Ctrl+Click or Cmd+Click for multiple selection)</i> <br>
       <select multiple id="waypoints">
-        <option value="Planet Fitness, Metropolis Way, Orlando, FL, USA">Planet Fitness</option>
-        <option value="McDonald's, South Hiawassee Road, Orlando, FL, USA">McDonald's</option>
-        <option value="Wendy's, Wilshire Drive, Orlando, FL, USA">Wendy's</option>
-        <option value="Dollar Tree, South Kirkman Road, Orlando, FL, USA">Dollar Tree</option>
-        <option value="Walgreens, South Kirkman Road, Orlando, FL, USA">Walgreens</option>
-        <option value="Starbucks, South Kirkman Road, Orlando, FL, USA">Starbucks</option>
-        <option value="Chipotle Mexican Grill, South Kirkman Road, Orlando, FL, USA">Chipotle</option>
-        <option value="Essentials Spa & Salon Metrowest, 1507 Park Center Dr #1K, Orlando, FL 32835">Spa</option>
+        <option value="Planet Fitness, Metropolis Way, Orlando, FL, USA" selected>Planet Fitness</option>
+        <option value="McDonald's, South Hiawassee Road, Orlando, FL, USA" selected>McDonald's</option>
+        <option value="Wendy's, Wilshire Drive, Orlando, FL, USA" selected>Wendy's</option>
+        <option value="Dollar Tree, South Kirkman Road, Orlando, FL, USA" selected>Dollar Tree</option>
+        <option value="Walgreens, South Kirkman Road, Orlando, FL, USA" selected>Walgreens</option>
+        <option value="Starbucks, South Kirkman Road, Orlando, FL, USA" selected>Starbucks</option>
+        <option value="Chipotle Mexican Grill, South Kirkman Road, Orlando, FL, USA" selected>Chipotle</option>
+        <option value="Essentials Spa & Salon Metrowest, 1507 Park Center Dr #1K, Orlando, FL 32835" selected>Spa</option>
       </select>
       <br>
         <input type="submit" id="submit">
@@ -117,40 +110,43 @@
       <div id="directions-panel"></div>
       </div>
 
-  <!-- This div creates the map -->
-    <div id="map"></div>
-  <!-- This div gets the current weather -->
-    <div id="weather">Local weather Conditions</div>
 
 
-    <div id="opponent-info">
-      <table id="player-stats">
-        <thead>
-          <tr>
-            <th>Players</th><br>
-            <th>Locations Visited</th>
-          </tr>
-        </thead>
-        <tbody>
 
-        <!-- Insert rows here -->
 
-        </tbody>
-      </table>
+    <!-- This div gets the current weather -->
+      <div id="weather">Local weather Conditions</div>
+
+
+      <div id="opponent-info">
+        <table id="player-stats">
+          <thead>
+            <tr>
+              <th>Players</th><br>
+              <th>Locations Visited</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          <!-- Insert rows here -->
+
+          </tbody>
+        </table>
+      </div>
     </div>
-  </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-  <script src="assets/javascript/logic.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
 
-  <!-- Embed Google Maps -->
-  <!-- <script src="assets/javascript/google-api.js"></script>
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC1UGWG6ROIOtSbZ7piVJ0YvhjmTAotOc&callback=initMap">
-  </script> -->
-  <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyD8X3TjatPq-MC5drdcEC-elKjkkLzottg"></script>
 
-</body>
+    <!-- Embed Google Maps -->
+
+    <!--<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC1UGWG6ROIOtSbZ7piVJ0YvhjmTAotOc&callback=initMap">
+    </script>-->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyD8X3TjatPq-MC5drdcEC-elKjkkLzottg"></script>
+    <script src="assets/javascript/logic.js"></script>
+    <!-- <script src="assets/javascript/google-api.js"></script> -->
+  </body>
 </html>
